@@ -1,0 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+<!doctype html>
+<html lang="fr">
+  <head><BaseHead title="Accueil" description={SITE_DESCRIPTION} /></head>
+  <body>
+    <Header />
+    <main class="home-main">
+      <section class="hero section-wrap">
+        <p class="eyebrow"><span class="status-dot"></span> Portfolio & carnet de bord</p>
+        <h1>En cours de<br /><span class="gradient-text">compilation.</span></h1>
+        <p class="hero-lead">Je construis ma place dans le développement web, un projet après l’autre. Ici, je partage ce que j’apprends, ce que je crée et ce qui m’inspire — avec ses réussites, ses bugs et ses détours.</p>
+        <div class="hero-actions"><a class="button button-primary" href="/portfolio/">Découvrir mes projets <span aria-hidden="true">↗</span></a><a class="button button-quiet" href="/blog/">Lire le carnet de bord <span aria-hidden="true">→</span></a></div>
+        <div class="hero-terminal" aria-label="Extrait de terminal décoratif">
+          <div class="terminal-bar"><span></span><span></span><span></span><small>~/en-cours-de-compilation</small></div>
+          <div class="terminal-body"><p><span class="terminal-prompt">$</span> npm run build</p><p class="terminal-muted">Préparation du prochain chapitre…</p><p><span class="terminal-success">✓</span> curiosité <span class="terminal-success">✓</span> apprentissage <span class="terminal-success">✓</span> persévérance</p><p><span class="terminal-prompt">$</span> <span class="cursor">▋</span></p></div>
+        </div>
+      </section>
+      <section class="section-wrap home-sections">
+        <div class="section-heading"><div><p class="eyebrow">Explorer</p><h2>Plusieurs onglets, une même aventure.</h2></div><p>Un espace pour suivre mon évolution, présenter mes réalisations et garder une place pour le reste.</p></div>
+        <div class="feature-grid">
+          <a class="feature-card" href="/blog/#projet-ecole"><span class="card-index">01 / APPRENDRE</span><span class="feature-icon">{ }</span><h3>Mon projet d’école</h3><p>Le projet fil rouge, de la première idée aux choix techniques, en passant par les étapes et les problèmes résolus.</p><span class="card-link">Suivre le projet <span>↗</span></span></a>
+          <a class="feature-card" href="/blog/#carnet-de-bord"><span class="card-index">02 / PROGRESSER</span><span class="feature-icon">⌘</span><h3>Carnet de bord</h3><p>Veille, apprentissages, découvertes techniques et réflexions sur mon parcours dans la tech.</p><span class="card-link">Lire les notes <span>↗</span></span></a>
+          <a class="feature-card" href="/blog/#hors-du-terminal"><span class="card-index">03 / RESPIRER</span><span class="feature-icon">✳</span><h3>Hors du terminal</h3><p>Jeux vidéo, lecture, jeu de rôle et autres passions qui nourrissent aussi ma créativité.</p><span class="card-link">Sortir du code <span>↗</span></span></a>
+        </div>
+      </section>
+      <section class="closing-band"><div class="section-wrap closing-inner"><p class="eyebrow">Toujours en cours</p><h2>Pas besoin d’avoir tout fini<br />pour montrer le chemin.</h2><a class="text-link" href="/about/">Faire connaissance <span>→</span></a></div></section>
+    </main>
+    <Footer />
+  </body>
+</html>

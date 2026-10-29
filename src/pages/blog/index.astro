@@ -1,0 +1,23 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const categories = [
+  { id: 'projet-ecole', number: '01', title: "Mon projet d’école", tag: 'PROJET FIL ROUGE', description: 'Journal de bord du projet de fin de formation : réflexion, conception, développement, tests et bilan.' },
+  { id: 'carnet-de-bord', number: '02', title: 'Carnet de bord', tag: 'APPRENTISSAGE & VEILLE', description: 'Les notions que j’explore, les problèmes que je résous et les découvertes que je veux garder sous la main.' },
+  { id: 'hors-du-terminal', number: '03', title: 'Hors du terminal', tag: 'CULTURE & PASSIONS', description: 'Jeux vidéo, lectures, jeu de rôle et inspirations qui existent aussi loin de l’écran de code.' },
+];
+---
+<!doctype html><html lang="fr"><head><BaseHead title="Blog" description={SITE_DESCRIPTION} /></head><body><Header />
+<main class="page-main">
+  <section class="page-intro"><p class="eyebrow">/ journal.log</p><h1>Le carnet de <span class="gradient-text">bord.</span></h1><p class="page-lead">Tout ce qui se construit entre une idée et sa version finale. À mon rythme, sans calendrier éditorial imposé.</p></section>
+  <section class="category-list" aria-label="Rubriques du blog">
+    {categories.map((category) => <article class="category-card" id={category.id}><div class="category-number">{category.number}</div><div class="category-content"><p class="eyebrow">{category.tag}</p><h2>{category.title}</h2><p>{category.description}</p><a class="text-link" href={`#${category.id}-articles`}>Voir les articles <span>↓</span></a></div><span class="category-symbol" aria-hidden="true">{category.number === '01' ? '{ }' : category.number === '02' ? '⌘' : '✳'}</span></article>)}
+  </section>
+  <section class="articles-section"><div class="section-heading"><div><p class="eyebrow">Dernières notes</p><h2>Les articles</h2></div><span class="mono-label">{posts.length.toString().padStart(2, '0')} publication(s)</span></div>
+    {posts.length ? <div class="article-grid">{posts.map((post) => <a class="article-card" href={`/blog/${post.id}/`}><p class="eyebrow">{post.data.category ?? 'CARNET DE BORD'}</p><h3>{post.data.title}</h3><p>{post.data.description}</p><span class="article-date">{post.data.pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })} · Lire <span>↗</span></span></a>)}</div> : <div class="empty-state"><span class="empty-state-icon">//</span><div><h3>Les premières notes se préparent.</h3><p>Les rubriques sont en place. Les articles viendront au fil des projets et des découvertes.</p></div></div>}
+  </section>
+</main><Footer /></body></html>

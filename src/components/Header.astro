@@ -1,0 +1,19 @@
+---
+import { SITE_TITLE } from '../consts';
+const path = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Accueil' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/portfolio/', label: 'Portfolio' },
+  { href: '/about/', label: 'À propos' },
+];
+---
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Navigation principale">
+    <a class="brand" href="/" aria-label={`${SITE_TITLE}, accueil`}><span class="brand-mark">&lt;/&gt;</span><span>{SITE_TITLE}</span></a>
+    <div class="nav-links">
+      {links.map((link) => <a href={link.href} class:list={{ active: link.href === '/' ? path === '/' : path.startsWith(link.href) }} aria-current={(link.href === '/' ? path === '/' : path.startsWith(link.href)) ? 'page' : undefined}>{link.label}</a>)}
+    </div>
+    <a class="nav-github" href="https://github.com/tekeani" target="_blank" rel="noreferrer" aria-label="GitHub (nouvel onglet)">GitHub <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
