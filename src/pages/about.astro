@@ -3,9 +3,308 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 ---
-<!doctype html><html lang="fr"><head><BaseHead title="À propos" description="Mon parcours, mes compétences et ma reconversion dans le développement web." /></head><body><Header /><main class="page-main about-main">
-  <section class="page-intro"><p class="eyebrow">/ whoami</p><h1>En transition, <span class="gradient-text">en construction.</span></h1><p class="page-lead">Je suis en reconversion vers le développement web : un parcours fait de curiosité, de pratique et de projets qui prennent forme ligne après ligne.</p></section>
-  <section class="about-grid"><div class="about-copy"><p class="eyebrow">Le parcours</p><h2>Apprendre en faisant.</h2><p>Après plusieurs expériences dans l’écriture web et la création de contenus, j’ai choisi de me tourner vers le développement. J’aime comprendre comment les choses fonctionnent, résoudre des problèmes et construire des outils qui ont une utilité réelle.</p><p>Ma formation fullstack m’amène à travailler aussi bien sur l’interface que sur le serveur et les données. Ce site est un espace pour documenter cette progression sans prétendre avoir déjà tout maîtrisé.</p><p>Je garde une place importante pour la créativité, la transmission et les projets personnels — parce que la technique est aussi une façon de donner vie aux idées.</p><a class="button button-primary" href="/portfolio/">Voir mes projets <span>↗</span></a></div>
-    <aside class="about-panel"><p class="eyebrow">Stack en cours d’exploration</p><h3>Technologies</h3><div class="skill-group"><span>FRONTEND</span><div class="tech-list"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>TypeScript</b><b>React</b></div></div><div class="skill-group"><span>BACKEND & DONNÉES</span><div class="tech-list"><b>Node.js</b><b>Express</b><b>SQL</b><b>PostgreSQL</b><b>Prisma</b></div></div><div class="skill-group"><span>AUTRES ENVIRONNEMENTS</span><div class="tech-list"><b>Kotlin</b><b>Jetpack Compose</b><b>Git</b></div></div><div class="about-note"><span class="terminal-success">●</span> En apprentissage continu</div></aside>
-  </section><section class="about-interests"><p class="eyebrow">Hors écran, aussi</p><h2>La curiosité ne s’arrête pas au code.</h2><div class="interest-list"><span>Jeux vidéo</span><span>Jeu de rôle</span><span>Lecture & imaginaire</span><span>Moto</span><span>Nature</span></div></section>
-</main><Footer /></body></html>
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <BaseHead
+      title="À propos"
+      description="Mon parcours, mes compétences et ma reconversion dans le développement web."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="page-main about-main">
+
+      <!-- INTRODUCTION -->
+      <section class="page-intro">
+        <p class="eyebrow">/ Qui suis-je ?</p>
+
+      <h1>
+        En reconversion, <span class="gradient-text">en cours de compilation.</span>
+      </h1>
+
+        <p class="page-lead">
+          En reconversion dans la tech,
+          je découvre les multiples facettes de cet univers
+          et je me forme au développement web.
+        </p>
+      </section>
+
+      <!-- PARCOURS ET COMPÉTENCES -->
+      <section class="about-grid">
+
+        <div class="about-copy">
+          <p class="eyebrow">Mon parcours</p>
+
+          <h2>Apprendre en faisant.</h2>
+
+          <p>
+            Mon parcours n'a pas vraiment suivi une ligne droite. Et finalement,
+            c'est peut-être ce qui en fait sa richesse.
+          </p>
+
+          <p>
+            J'ai commencé ma vie professionnelle dans le monde de la petite enfance,
+            avec un diplôme d'État d'auxiliaire de puériculture, puis un agrément
+            d'assistante maternelle. Après une première expérience dans ce domaine,
+            j'ai fait un choix de vie important : consacrer plusieurs années à
+            l'éducation de mes trois enfants, notamment à travers l'instruction en
+            famille (IEF).
+          </p>
+
+          <p>
+            En parallèle, j'ai renoué avec une autre passion : l'écriture. J'ai
+            commencé comme rédactrice web pour un site éducatif destiné aux enfants,
+            avant de devenir autrice jeunesse, avec plusieurs livres publiés en
+            maison d'édition. L'écriture, la lecture, la création et la transmission
+            ont toujours occupé une place importante dans ma vie. Et mon côté geek
+            n'était jamais bien loin : je tenais déjà des blogs plus jeune, je suis
+            passionnée de jeux vidéo et j'ai toujours aimé explorer les possibilités
+            offertes par les nouvelles technologies.
+          </p>
+
+          <p>
+            C'est justement à la croisée de ces univers que j'ai commencé à
+            m'intéresser de plus près au développement web. En travaillant sur mes
+            projets d'écriture et d'édition, je me suis retrouvée confrontée à mes
+            propres limites : marketing, réseaux sociaux, création et gestion de
+            sites web… J'utilisais des outils sans toujours comprendre ce qui se
+            passait derrière. Et surtout, j'avais envie de pouvoir aller plus loin,
+            de ne plus dépendre uniquement de solutions existantes pour donner vie
+            à mes idées.
+          </p>
+
+          <p>
+            J'ai donc commencé par une formation en développement fullstack sur
+            Udemy, simplement pour tester et voir si cet univers pouvait me
+            correspondre. Et ça a été le déclic ! J'ai découvert le plaisir de
+            comprendre, d'expérimenter, de construire quelque chose et d'en voir
+            immédiatement le résultat. J'aime enquêter sur un bug, chercher
+            pourquoi ça ne fonctionne pas, tester différentes pistes et surtout
+            ressentir cette satisfaction quand, enfin, tout s'éclaire. Le
+            développement m'offrait aussi un formidable terrain de jeu pour ma
+            créativité : celui de pouvoir transformer une idée en un véritable
+            outil ou projet.
+          </p>
+
+          <p>
+            Convaincue d'avoir trouvé une voie qui me correspondait, j'ai rejoint
+            Ada Tech School pour suivre une formation de deux ans en développement
+            fullstack, avec pour objectif l'obtention du titre RNCP de niveau 6 de
+            Concepteur développeur d'applications.
+          </p>
+
+          <p>
+            Les neuf premiers mois de formation à temps complet ont été
+            particulièrement riches. J'y ai appris les fondamentaux du
+            développement, exploré différentes technologies et travaillé sur des
+            projets individuels et collectifs, en utilisant notamment les méthodes
+            agiles. J'ai aussi découvert l'importance du travail en équipe, du
+            partage de connaissances et de la confrontation des idées. Bref, j'ai
+            appris à apprendre, à chercher, à essayer, à me tromper et à
+            recommencer.
+          </p>
+
+          <p>
+            La recherche d'une alternance pour poursuivre ma formation et valider
+            ma deuxième année s'est révélée plus longue que prévu, dans un contexte
+            de recrutement particulièrement difficile. Mais cette période a aussi
+            ouvert une porte inattendue : Ada Tech School m'a proposé de rejoindre
+            l'équipe pédagogique en tant que <em>Teacher Assistant</em>.
+          </p>
+
+          <p>
+            Pendant près d'un an, j'ai accompagné les apprenants dans leur
+            progression technique. Une expérience qui a fait écho à beaucoup de
+            choses dans mon parcours : mon goût pour la transmission, mon expérience
+            de l'éducation et ma capacité à observer, comprendre les besoins de
+            chacun et adapter mon accompagnement. J'ai pu consolider mes propres
+            connaissances tout en découvrant une autre facette de la tech : celle
+            du partage et de l'apprentissage collectif.
+          </p>
+
+          <p>
+            Je n'ai pour autant jamais abandonné ma recherche d'alternance. Après
+            de nombreuses candidatures et plusieurs entretiens, j'ai finalement
+            rejoint BPCE Solutions informatiques (BPCE SI), l'entité informatique
+            du Groupe BPCE, dans le cadre du projet Orion.
+          </p>
+
+          <p>
+            J'y occupe un poste de chargée de mission, avec un rôle transversal
+            auprès de trois équipes. Je contribue à faire le lien entre elles, à
+            faciliter les échanges et à accompagner l'avancement du projet. C'est
+            une nouvelle dimension que je découvre : celle de la coordination, de
+            la vision d'ensemble et des interactions entre les enjeux métier et
+            les réalités techniques.
+          </p>
+
+          <p>
+            Aujourd'hui, je poursuis ma formation en parallèle de cette expérience
+            professionnelle. Je continue à développer mes compétences techniques,
+            tout en découvrant les métiers qui gravitent autour de la conception
+            et de l'évolution des produits : développement, coordination,
+            chefferie de projet, Product Ownership…
+          </p>
+
+          <p>
+            Mon objectif est de faire converger toutes ces expériences vers un
+            métier à responsabilités, dans lequel je pourrai mettre à profit ma
+            compréhension des enjeux techniques, ma capacité à faire le lien entre
+            les équipes et mon goût pour la collaboration. Je suis convaincue que
+            la richesse de mon parcours constitue une véritable force pour
+            appréhender un produit dans sa globalité, comprendre les besoins des
+            différents interlocuteurs et contribuer à des projets qui ont du sens
+            pour l'entreprise.
+          </p>
+
+          <p>
+            Je ne connais pas encore toutes les étapes qui m'attendent, mais je
+            sais dans quelle direction je souhaite avancer : continuer à apprendre,
+            gagner en expertise et en responsabilités, et faire de cette diversité
+            de compétences un véritable atout professionnel.
+          </p>
+
+          <p>
+            Finalement, je crois que c'est aussi ça qui me plaît dans la tech :
+            les possibilités sont nombreuses, les métiers évoluent et il y a
+            toujours quelque chose à construire. Et moi, je suis bien décidée à
+            apporter ma pierre à l'édifice.
+          </p>
+
+<div class="about-actions">
+
+  <a class="action-card action-card-primary" href="/portfolio/">
+    <span class="action-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <path d="M3 7h7l2 2h9a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 1-2Z"/>
+        <path d="m9 15 2 2 4-4"/>
+      </svg>
+    </span>
+
+    <span class="action-content">
+      <strong>Mes projets</strong>
+      <small>Découvrir mon travail</small>
+    </span>
+
+    <span class="action-arrow" aria-hidden="true">↗</span>
+  </a>
+
+  <a
+    class="action-card"
+    href="/cv-marie-marchal.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span class="action-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+        <path d="M14 2v6h6M8 13h8M8 17h8"/>
+      </svg>
+    </span>
+
+    <span class="action-content">
+      <strong>Mon CV</strong>
+      <small>Parcours et compétences</small>
+    </span>
+
+    <span class="action-arrow" aria-hidden="true">↓</span>
+  </a>
+
+  <a
+    class="action-card"
+    href="mailto:marie.massie77@gmail.com?subject=Prise%20de%20contact%20depuis%20ton%20portfolio"
+  >
+    <span class="action-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 7-10 7L2 7"/>
+      </svg>
+    </span>
+
+    <span class="action-content">
+      <strong>Contact</strong>
+      <small>Échangeons ensemble</small>
+    </span>
+
+    <span class="action-arrow" aria-hidden="true">↗</span>
+  </a>
+
+</div>
+        </div>
+
+        <aside class="about-panel">
+          <p class="eyebrow">Stack en cours d’exploration</p>
+
+          <h3>Technologies</h3>
+
+          <div class="skill-group">
+            <span>FRONTEND</span>
+
+            <div class="tech-list">
+              <b>HTML</b>
+              <b>CSS</b>
+              <b>JavaScript</b>
+              <b>TypeScript</b>
+              <b>React</b>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span>BACKEND & DONNÉES</span>
+
+            <div class="tech-list">
+              <b>Node.js</b>
+              <b>Express</b>
+              <b>SQL</b>
+              <b>PostgreSQL</b>
+              <b>Prisma</b>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span>AUTRES ENVIRONNEMENTS</span>
+
+            <div class="tech-list">
+              <b>Kotlin</b>
+              <b>Jetpack Compose</b>
+              <b>Git</b>
+            </div>
+          </div>
+
+          <div class="about-note">
+            <span class="terminal-success">●</span> En apprentissage continu
+          </div>
+        </aside>
+
+      </section>
+
+      <!-- CENTRES D'INTÉRÊT -->
+      <section class="about-interests">
+        <p class="eyebrow">Hors écran, aussi</p>
+
+        <h2>La curiosité ne s’arrête pas au code.</h2>
+
+        <div class="interest-list">
+          <span>Jeux vidéo</span>
+          <span>Jeu de rôle</span>
+          <span>Lecture & imaginaire</span>
+          <span>Moto</span>
+          <span>Nature</span>
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </body>
+</html>
