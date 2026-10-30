@@ -2,10 +2,22 @@
 import { SITE_TITLE } from '../consts';
 const year = new Date().getFullYear();
 ---
+
 <footer class="site-footer">
   <div class="footer-inner">
-    <a class="brand footer-brand" href="/"><span class="brand-mark">&lt;/&gt;</span><span>{SITE_TITLE}</span></a>
-    <p>En construction, comme le code.</p>
-    <span class="footer-copy">© {year} · Fait avec soin et quelques lignes de code.</span>
+
+    <a class="brand footer-brand" href="/">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>{SITE_TITLE}</span>
+    </a>
+
+    <p>
+      En évolution, comme le code.
+    </p>
+
+    <span class="footer-copy">
+      © {year} · Marie Marchal
+    </span>
+
   </div>
 </footer>
