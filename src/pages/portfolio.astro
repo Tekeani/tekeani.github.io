@@ -13,73 +13,72 @@ import Header from '../components/Header.astro';
       description="Projets web et applications en cours de développement."
     />
   </head>
+
   <body>
     <Header />
 
     <main class="page-main">
       <section class="page-intro">
-        <p class="eyebrow">/ projets.index</p>
-        <h1>Du concret, <span class="gradient-text">pas à pas.</span></h1>
+        <p class="eyebrow">/ const projects = []</p>
+
+        <h1>
+          Build. Test. <span class="gradient-text">Deploy.</span>
+        </h1>
+
         <p class="page-lead">
-          Des projets pour apprendre, expérimenter et transformer des idées
-          en produits utilisables. Les captures et liens seront ajoutés au fil
-          de leur avancement.
+          De l'idée en passant par le premier commit jusqu'au déploiement...
+          Voici les projets que j'ai construits, les univers que
+          j'ai explorés et les idées que j'ai choisi de concrétiser.
         </p>
       </section>
 
       <section class="project-grid">
+
+        <!-- PROJET 01 : MOBLE -->
         <article class="project-card project-featured">
-          <div class="project-visual visual-moteo">
-            <span class="visual-label">APPLICATION ANDROID</span>
-            <span class="visual-symbol">⌁</span>
-            <span class="visual-code">MOTÉO / 001</span>
-          </div>
-
-          <div class="project-details">
-            <div class="project-meta">
-              <span>01 — MOBILE</span>
-              <span class="project-status">
-                <i></i> En développement
-              </span>
-            </div>
-
-            <h2>Motéo</h2>
-            <p>
-              Une application pensée pour les motards, avec un backend dédié
-              et une approche centrée sur les alertes utiles pendant leurs trajets.
-            </p>
-
-            <div class="tech-list">
-              <span>Kotlin</span>
-              <span>Jetpack Compose</span>
-              <span>Ktor</span>
-            </div>
-
-            <p class="project-note">
-              Prochaine étape : ajouter des captures et préciser les fonctionnalités livrées.
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card">
           <div class="project-visual visual-moble">
             <span class="visual-label">PLATEFORME WEB</span>
-            <span class="visual-symbol">◫</span>
-            <span class="visual-code">MOBLE / 002</span>
+
+            <img
+              class="visual-image"
+              src="/images/moble.png"
+              alt="Capture d'écran de la plateforme Moble"
+            />
+
+            <span class="visual-code">MOBLE / 001</span>
           </div>
 
           <div class="project-details">
             <div class="project-meta">
-              <span>02 — FULLSTACK</span>
+              <span>01 — FULLSTACK</span>
               <span class="project-status">
-                <i></i> En évolution
+                <i></i> Terminé
               </span>
             </div>
 
             <h2>Moble</h2>
+
             <p>
-              Une plateforme autour du mobilier vintage, développée pour
-              pratiquer la création d’interfaces et la gestion de données.
+              Premier projet d'équipe réalisé from scratch dans le cadre d'un sprint de deux semaines,
+              avec pour objectif de concevoir et déployer une application web tout en apprenant React.
+              <br /><br />
+
+              Au sein d'une équipe de huit développeurs répartis entre front-end et back-end,
+              j'ai d'abord contribué au développement back-end : conception de la base de données
+              PostgreSQL sur Neon, création des routes API et implémentation des opérations CRUD.
+              <br /><br />
+
+              Après une rotation des équipes à mi-parcours, j'ai poursuivi le développement côté front-end
+              avec React, en assurant la récupération et l'affichage des données. J'ai également développé
+              en autonomie une fonctionnalité de filtrage par catégorie.
+              Par la suite, j'ai pris en charge le déploiement de l'application sur Vercel.
+              <br /><br />
+
+              Le projet s'est déroulé selon une organisation agile, avec daily meetings, revues de code
+              et livraison du produit à l'issue du sprint lors d'une démonstration devant un panel simulant
+              des clients. Cette organisation m'a permis de développer ma polyvalence technique,
+              mon autonomie et ma capacité à collaborer, à transmettre et à reprendre du code existant
+              dans un contexte de travail en équipe.
             </p>
 
             <div class="tech-list">
@@ -87,16 +86,139 @@ import Header from '../components/Header.astro';
               <span>Express</span>
               <span>PostgreSQL</span>
               <span>Prisma</span>
+              <span>Neon</span>
+              <span>Vercel</span>
             </div>
 
-            <p class="project-note">Démonstration et dépôt à renseigner.</p>
+            <div class="project-links">
+              <a class="button button-primary" href="https://moble-front.vercel.app/">
+                Voir le site
+                <span>↗</span>
+              </a>
+
+              <a class="button button-secondary" href="https://github.com/Tekeani/moble_back">
+                GitHub
+                <span>↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="project-card">
+        <!-- PROJET 02 : MOTÉO -->
+        <article class="project-card project-featured">
+          <div class="project-visual visual-moteo">
+            <span class="visual-label">APPLICATION ANDROID</span>
+
+            <div class="moteo-carousel" data-moteo-carousel>
+              <div class="moteo-carousel-image">
+                <img
+                  src="/images/moteo/motéo1.jpg"
+                  alt="Écran de connexion de l'application Motéo"
+                  data-carousel-image
+                />
+              </div>
+
+              <button
+                class="carousel-arrow carousel-prev"
+                type="button"
+                aria-label="Image précédente"
+                data-carousel-prev
+              >
+                &#10094;
+              </button>
+
+              <button
+                class="carousel-arrow carousel-next"
+                type="button"
+                aria-label="Image suivante"
+                data-carousel-next
+              >
+                &#10095;
+              </button>
+
+              <div class="carousel-pagination">
+                <div class="carousel-dots">
+                  <button
+                    class="active"
+                    type="button"
+                    aria-label="Afficher l'image 1"
+                    aria-current="true"
+                    data-carousel-dot="0"
+                  ></button>
+
+                  <button
+                    type="button"
+                    aria-label="Afficher l'image 2"
+                    data-carousel-dot="1"
+                  ></button>
+
+                  <button
+                    type="button"
+                    aria-label="Afficher l'image 3"
+                    data-carousel-dot="2"
+                  ></button>
+                </div>
+              </div>
+            </div>
+
+            <span class="visual-code">MOTÉO / 002</span>
+          </div>
+
+          <div class="project-details">
+            <div class="project-meta">
+              <span>02 — MOBILE</span>
+              <span class="project-status">
+                <i></i> À refactorer
+              </span>
+            </div>
+
+            <h2>Motéo</h2>
+
+            <p>
+                Développé en solo et en un mois dans le cadre d'un projet de fin de première année à 
+                Ada Tech School, Motéo est né de mon choix d'explorer l'écosystème Android par curiosité 
+                technique et envie de découvrir de nouvelles technologies.<br /><br />
+
+                Ce choix impliquait de travailler seule, sans accompagnement pédagogique puisque 
+                Kotlin et le développement Android ne faisaient pas partie du programme de formation. 
+                J'ai donc appris en autonomie à utiliser Android Studio, Kotlin, Jetpack Compose et 
+                Ktor, en m'appuyant sur la documentation et mes propres recherches.<br /><br />
+
+                J'ai conçu cette application dans le but de permettre aux motards d'anticiper 
+                les risques météorologiques grâce à leur localisation et aux données de l'API
+                OpenWeatherMap. Le MVP intègre notamment l'authentification, la gestion du profil 
+                et la récupération des données météo.<br /><br />
+
+                Présenté lors du Demo Day devant un jury de développeurs professionnels, 
+                ce projet a démontré ma capacité à sortir de mon cadre de formation, 
+                acquérir seule de nouvelles compétences techniques et livrer un MVP fonctionnel 
+                dans un délai contraint.<br /><br />
+
+                Aujourd'hui, par manque de temps et avec mes contraintes professionnelles, 
+                le projet est devenu obsolète et ne tourne plus.<br /><br />
+
+                Avec le recul, je ferais évoluer l'architecture et reprendrais le projet 
+                sur des bases plus adaptées. Le système de notifications pour alerter 
+                l'utilisateur sans avoir besoin d'ouvrir l'application, imaginé au départ, 
+                reste une fonctionnalité à ajouter avant la mise en production.
+            </p>
+
+            <div class="tech-list">
+              <span>Kotlin</span>
+              <span>Jetpack Compose</span>
+              <span>Ktor</span>
+              <span>Android Studio</span>
+              <span>IntelliJ IDEA</span>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- PROJET 03 : GÉNÉRATEUR DE FICHES JDR -->
+        <article class="project-card project-featured">
           <div class="project-visual visual-lab">
             <span class="visual-label">PROJET DE FIN DE FORMATION</span>
-            <span class="visual-symbol">&lbrace;&hellip;&rbrace;</span>
+            <span class="visual-symbol">&#123;…&#125;</span>
             <span class="visual-code">PROJECT / 003</span>
           </div>
 
@@ -109,6 +231,7 @@ import Header from '../components/Header.astro';
             </div>
 
             <h2>Générateur de fiches JDR</h2>
+
             <p>
               Le projet fil rouge : créer un site qui accompagne les joueurs
               dans la création et l’organisation de personnages de jeu de rôle.
@@ -120,19 +243,152 @@ import Header from '../components/Header.astro';
               <span>À définir</span>
             </div>
 
+            <div class="project-links">
+              <a class="button button-primary" href="#">
+                Voir le projet
+                <span>↗</span>
+              </a>
+
+              <a class="button button-secondary" href="#">
+                GitHub
+                <span>↗</span>
+              </a>
+            </div>
+
             <a class="text-link" href="/blog/#projet-ecole">
               Suivre la conception <span>↗</span>
             </a>
           </div>
         </article>
+
       </section>
 
-      <p class="portfolio-footnote">
-        <span class="terminal-success">✓</span>
-        Portfolio vivant : les projets évolueront avec le code, les tests et les retours.
-      </p>
     </main>
 
     <Footer />
+
+    <!-- VISIONNEUSE COMMUNE À TOUTES LES IMAGES -->
+    <div
+      class="image-lightbox"
+      data-image-lightbox
+      aria-hidden="true"
+    >
+      <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Fermer l'image"
+        data-lightbox-close
+      >
+        &times;
+      </button>
+
+      <img src="" alt="" data-lightbox-image />
+    </div>
+
+    <!-- CARROUSEL MOTÉO ET AGRANDISSEMENT DES IMAGES -->
+    <script is:inline>
+      const carousel = document.querySelector('[data-moteo-carousel]');
+
+      if (carousel) {
+        const images = [
+          {
+            src: '/images/moteo/motéo1.jpg',
+            alt: "Écran de connexion de l'application Motéo"
+          },
+          {
+            src: '/images/moteo/motéo3.jpg',
+            alt: "Écran principal de Motéo avec les alertes météo"
+          },
+          {
+            src: '/images/moteo/motéo2.jpg',
+            alt: "Présentation des fonctionnalités de Motéo"
+          }
+        ];
+
+        const image = carousel.querySelector('[data-carousel-image]');
+        const dots = carousel.querySelectorAll('[data-carousel-dot]');
+        const prev = carousel.querySelector('[data-carousel-prev]');
+        const next = carousel.querySelector('[data-carousel-next]');
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+          currentIndex = (index + images.length) % images.length;
+
+          image.setAttribute('src', images[currentIndex].src);
+          image.setAttribute('alt', images[currentIndex].alt);
+
+          dots.forEach((dot, i) => {
+            const isActive = i === currentIndex;
+
+            dot.classList.toggle('active', isActive);
+
+            if (isActive) {
+              dot.setAttribute('aria-current', 'true');
+            } else {
+              dot.removeAttribute('aria-current');
+            }
+          });
+        }
+
+        prev.addEventListener('click', () => {
+          showImage(currentIndex - 1);
+        });
+
+        next.addEventListener('click', () => {
+          showImage(currentIndex + 1);
+        });
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            showImage(index);
+          });
+        });
+      }
+
+      // VISIONNEUSE POUR TOUTES LES IMAGES DU PORTFOLIO
+
+      const projectGrid = document.querySelector('.project-grid');
+      const lightbox = document.querySelector('[data-image-lightbox]');
+      const lightboxImage = document.querySelector('[data-lightbox-image]');
+      const closeButton = document.querySelector('[data-lightbox-close]');
+
+      function openLightbox(image) {
+        lightboxImage.setAttribute('src', image.getAttribute('src'));
+        lightboxImage.setAttribute('alt', image.getAttribute('alt') || '');
+
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      projectGrid.addEventListener('click', (event) => {
+        const image = event.target.closest('img');
+
+        if (image && projectGrid.contains(image)) {
+          openLightbox(image);
+        }
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+    </script>
   </body>
 </html>

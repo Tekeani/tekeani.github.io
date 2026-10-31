@@ -844,6 +844,173 @@ p {
   font-size: .8rem;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.visual-image {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  width: 95%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-visual:hover .visual-image {
+  transform: scale(1.05);
+}
+
+/* CARROUSEL MOTÉO */
+
+.moteo-carousel {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.moteo-carousel-image {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.moteo-carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-background-soft);
+  color: var(--color-text);
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--color-primary);
+  color: #171923;
+}
+
+.carousel-prev {
+  left: 5px;
+}
+
+.carousel-next {
+  right: 5px;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background: var(--color-primary);
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .moteo-carousel-image {
+    height: 300px;
+  }
+}
+
+
+/* Images du portfolio : curseur de zoom */
+
+.project-grid img {
+  cursor: zoom-in;
+}
+
+/* Visionneuse plein écran */
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: rgb(10 12 20 / 92%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  cursor: zoom-out;
+}
+
+.image-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: default;
+}
+
+/* Bouton de fermeture */
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
 /* ========================================
    ABOUT
 ======================================== */
